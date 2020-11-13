@@ -12,7 +12,7 @@ import { CoursesService } from './courses.service';
    `
 })
 export class CoursesComponent{
-    title="list of courses";
+    title="3Authors";
     courses;
    constructor(service:CoursesService){
       this.courses=service.getCourses();
