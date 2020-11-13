@@ -1,5 +1,6 @@
 import { from } from 'rxjs';
 import { Component, TemplateRef } from '@angular/core';
+import { CoursesService } from './courses.service';
 @Component({
    selector:'courses',//<courses></courses>
    template: `
@@ -13,7 +14,9 @@ import { Component, TemplateRef } from '@angular/core';
 export class CoursesComponent{
     title="list of courses";
     courses;
-
+   constructor(service:CoursesService){
+      this.courses=service.getCourses();
+   }
     getTitle(){
        return this.title;
     }
